@@ -11804,7 +11804,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -11862,7 +11862,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display a description of the dataset</span>
@@ -12005,7 +12005,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Select three indices of your choice you wish to sample from the dataset</span>
@@ -12164,7 +12164,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Make a copy of the DataFrame, using the &#39;drop&#39; function to drop the given feature</span>
@@ -12262,7 +12262,7 @@ I attempted to predict all the features by iterating one feature at a time.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Produce a scatter matrix for each pair of features in the data</span>
@@ -14075,6 +14075,9 @@ From the scatter plot we can notice</p>
 <li>The pairs(<strong>Grocery, Milk</strong>) and (<strong>Milk, Detergents_Paper</strong>) exhibits corelation to some extent.</li>
 <li><strong>Fresh, Frozen</strong> and <strong>Delicatessen</strong> doesn't seems to exhibit corelation with any feature. So, data from these three feature are important in finding spending habbits of the customer. </li>
 </ul>
+<p><strong>Data Distribution: </strong>
+By Observing the data distribution graph we can clearly notice the data is positively skewed with outliers. Most of teh data points are concentrated towards the origin(0).</p>
+<p>We will have to normalize the data and remove outliers in order to get best result from Clustering Algorithm.</p>
 
 </div>
 </div>
@@ -14104,7 +14107,7 @@ From the scatter plot we can notice</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Scale the data using the natural logarithm</span>
@@ -18215,7 +18218,7 @@ MRgMBoPBYDAYDJsC4/wYDAaDwWAwGAyGTcH/DzI4ezSBjeTkAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display the log-transformed sample data</span>
@@ -18322,7 +18325,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># For each feature find the data points with extreme high or low values</span>
@@ -19154,7 +19157,7 @@ We have found close to 10% of datapoints has outlier for atleast one feature. We
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;&#39;</span><span class="c1"># TODO: Apply PCA by fitting the good data with the same number of dimensions as features</span>
@@ -19524,10 +19527,10 @@ JElSh4FJkiRJkjoMTJIkSZLUYWCSJEmSpI7/B/+dfciLMip2AAAAAElFTkSuQmCC
 <li><strong>First Two Priciple Components</strong> explains 70.68% variations in the data. We should consider adding more components and see if we can improve variation calculation.</li>
 <li><strong>First Four Priciple Components</strong> explains 93.11% variations in the data. Considering fifth components explains lesss than 5% variation we can stick to four dimenions.</li>
 <li><strong>Components</strong><ul>
-<li><strong>First Component</strong>  has more weightage on <em>Milk and Forozen</em> features compared to other features. Customers spending on these two features greatly determines variance.</li>
-<li><strong>Second Component</strong>  is orthogonal to first component, where spending on <em>Detergents_Powder, Grocery and Milk</em> greatly determines variance in this component.</li>
-<li><strong>Third Component</strong>  - spending on <em>Delicatessen and Frozed</em> greatly determines variance in this component</li>
-<li><strong>Fourth Component</strong> - spending on "Frozen<em> is the single largest contributor with singnificant contribution from </em>Detergets_Powder* in finding variance in this component. This component explains 10% variance in the entire dataset compared to 70% from first two component combined. </li>
+<li><strong>First Component</strong>  has more weightage on <em>Detergents_paper, Grocery and Milk</em> features compared to other 3 features. Customers spending on these three features greatly determines variance in this component.</li>
+<li><strong>Second Component</strong>  is orthogonal to first component, where spending on <em>Fresh, Frozen adn Delicatessan</em> greatly determines variance in this component.</li>
+<li><strong>Third Component</strong>  - spending on <em>Delicatessen and Fresh</em> greatly determines variance in this component, however these two are inversely proportional. <em>Frozen</em> also greatly explains variance in this component</li>
+<li><strong>Fourth Component</strong> - spending on "Frozen and Delicatessen* greatly explains variance in this component and are inversly proportional. This component explains 10% variance in the entire dataset compared to 70% from first two component combined. </li>
 </ul>
 </li>
 </ul>
@@ -19546,7 +19549,7 @@ JElSh4FJkiRJkjoMTJIkSZLUYWCSJEmSpI7/B/+dfciLMip2AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display sample log-data after having a PCA transformation applied</span>
@@ -19650,7 +19653,7 @@ JElSh4FJkiRJkjoMTJIkSZLUYWCSJEmSpI7/B/+dfciLMip2AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Apply PCA by fitting the good data with only two dimensions</span>
@@ -19682,7 +19685,7 @@ JElSh4FJkiRJkjoMTJIkSZLUYWCSJEmSpI7/B/+dfciLMip2AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display sample log-data after applying PCA transformation in two dimensions</span>
@@ -19765,7 +19768,7 @@ JElSh4FJkiRJkjoMTJIkSZLUYWCSJEmSpI7/B/+dfciLMip2AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create a biplot</span>
@@ -19782,13 +19785,13 @@ JElSh4FJkiRJkjoMTJIkSZLUYWCSJEmSpI7/B/+dfciLMip2AAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[36]:</div>
+<div class="prompt output_prompt">Out[13]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xbd63dd8&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xd853cf8&gt;</pre>
 </div>
 
 </div>
@@ -20927,7 +20930,7 @@ AABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Import section</span>
@@ -20937,7 +20940,7 @@ AABJRU5ErkJggg==
 
 <span class="k">def</span> <span class="nf">GMM_score</span><span class="p">(</span><span class="n">components_number</span><span class="p">):</span>
     <span class="c1"># TODO: Apply your clustering algorithm of choice to the reduced data </span>
-    <span class="n">clusterer</span> <span class="o">=</span> <span class="n">GaussianMixture</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">reduced_data</span><span class="p">)</span>
+    <span class="n">clusterer</span> <span class="o">=</span> <span class="n">GaussianMixture</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="n">components_number</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">reduced_data</span><span class="p">)</span>
 
     <span class="c1"># TODO: Predict the cluster for each data point</span>
     <span class="n">preds</span> <span class="o">=</span> <span class="n">clusterer</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">reduced_data</span><span class="p">)</span>
@@ -20954,6 +20957,20 @@ AABJRU5ErkJggg==
 
 <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
     <span class="n">GMM_score</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+
+<span class="n">clusterer</span> <span class="o">=</span> <span class="n">GaussianMixture</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">reduced_data</span><span class="p">)</span>
+
+<span class="c1"># TODO: Predict the cluster for each data point</span>
+<span class="n">preds</span> <span class="o">=</span> <span class="n">clusterer</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">reduced_data</span><span class="p">)</span>
+
+<span class="c1"># TODO: Find the cluster centers</span>
+<span class="n">centers</span> <span class="o">=</span> <span class="n">clusterer</span><span class="o">.</span><span class="n">means_</span>
+
+<span class="c1"># TODO: Predict the cluster for each transformed sample data point</span>
+<span class="n">sample_preds</span> <span class="o">=</span> <span class="n">clusterer</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">pca_samples</span><span class="p">)</span>
+
+<span class="c1"># TODO: Calculate the mean silhouette coefficient for the number of clusters chosen</span>
+<span class="n">score</span> <span class="o">=</span> <span class="n">silhouette_score</span><span class="p">(</span><span class="n">reduced_data</span><span class="p">,</span><span class="n">preds</span><span class="p">)</span>
     
 </pre></div>
 
@@ -20972,13 +20989,13 @@ AABJRU5ErkJggg==
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>0.4223246826459388 is the silhouette score for the n_component 2
-0.4223246826459388 is the silhouette score for the n_component 3
-0.4223246826459388 is the silhouette score for the n_component 4
-0.4223246826459388 is the silhouette score for the n_component 5
-0.4219168464626149 is the silhouette score for the n_component 6
-0.4223246826459388 is the silhouette score for the n_component 7
-0.4223246826459388 is the silhouette score for the n_component 8
-0.4223246826459388 is the silhouette score for the n_component 9
+0.37553218893793094 is the silhouette score for the n_component 3
+0.3458671375116742 is the silhouette score for the n_component 4
+0.30038028692085333 is the silhouette score for the n_component 5
+0.316879851107236 is the silhouette score for the n_component 6
+0.3322910354965106 is the silhouette score for the n_component 7
+0.3283407307149319 is the silhouette score for the n_component 8
+0.3312493910331773 is the silhouette score for the n_component 9
 </pre>
 </div>
 </div>
@@ -21004,7 +21021,7 @@ AABJRU5ErkJggg==
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
-<p>silhouette score remains considerably same for all the numbers i tried from 2-9. So I will keep the number as 2.</p>
+<p>silhouette score is higher at 0.42 for the number 2 and gradually reduced and reached 0.28 for the number 9. Considering this, I will keep the number 2 for better prediction.</p>
 
 </div>
 </div>
@@ -21020,7 +21037,7 @@ AABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display the results of the clustering from implementation</span>
@@ -21688,7 +21705,7 @@ AACg7xAIAQAAAOg7BEIAAAAA+g6BEAAAAIC+QyAEAAAAoO/8X1Lg6+0Is9djAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Inverse transform the centers</span>
@@ -21793,8 +21810,8 @@ AACg7xAIAQAAAOg7BEIAAAAA+g6BEAAAAIC+QyAEAAAAoO/8X1Lg6+0Is9djAAAAAElFTkSuQmCC
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <ul>
-<li><strong>Cluster 0:</strong> Customer falls in this cluster spends less on Fresh and Frozen and spends more on other items. This let me bileve customers in this cluster are <strong>convenience store</strong> or a small super market. </li>
-<li><strong>Cluster 1:</strong> Customer falls in this cluster spends more on Fresh and Frozen . This let me bileve customers in this cluster are <strong>restaurant</strong>. </li>
+<li><strong>Cluster 0:</strong> Customer falls in this cluster spends more on than average on <strong>Milk, Grocery</strong> and <strong>Detergents_Papaer</strong>. They also spend less on less on Fresh and Frozen compared to average sepnding.  This let me believe customers in this cluster are <strong>convenience store</strong> or <strong>retailer/small super market</strong>. </li>
+<li><strong>Cluster 1:</strong> Customer falls in this cluster has consistent purchase costs across the <strong>milk, grocery and frozen product</strong> categories and higher than average purchase costs of <strong>freshs</strong>. This let me believe customers in this cluster are <strong>restaurant/Food chain</strong>. </li>
 </ul>
 
 </div>
@@ -21815,7 +21832,7 @@ AACg7xAIAQAAAOg7BEIAAAAA+g6BEAAAAIC+QyAEAAAAoO/8X1Lg6+0Is9djAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display the predictions</span>
@@ -21954,7 +21971,7 @@ Sample point 2 predicted to be in Cluster 1
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display the clustering results based on &#39;Channel&#39; data</span>
